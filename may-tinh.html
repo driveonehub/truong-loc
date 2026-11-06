@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Máy tính Online</title>
+<link rel="icon" href="/iconbill.ico" type="image/x-icon">
+<link rel="stylesheet" href="/css-calculate.css">
+
+</head>
+<body>
+
+
+<div class="tabs" id="dashboardTabs">
+  <a class="home-link" href="/" title="Trang chủ" aria-label="Trang chủ">
+    <img src="/home.png" width="45" height="32" alt="Home"></a>
+  <a class="tab" data-tab="invoice" href="index.html">Hóa đơn</a>
+  <a class="tab" data-tab="lookup" href="tra-cuu-xml.html">Tra cứu XML</a>
+  <a class="tab" data-tab="calculate" href="#">Máy tính</a>
+</div>
+<br>
+
+<div class="calc">
+<div class="modes">
+<button id="basic" class="active" onclick="mode(false)">Cơ bản</button>
+<button id="advanced" onclick="mode(true)">Khoa học</button>
+</div>
+
+<div class="screen">
+<input id="expr" placeholder="Nhập biểu thức..." autocomplete="off">
+<div id="out">0</div>
+<div style="display:flex;justify-content:space-between;margin-top:8px">
+<button onclick="angle()" id="deg" style="padding:7px 12px">DEG</button>
+<button onclick="copyResult()" style="padding:7px 12px">Sao chép</button>
+</div>
+</div>
+
+<div class="science" id="science">
+<div class="keys">
+<button onclick="put('sin(')">sin</button>
+<button onclick="put('cos(')">cos</button>
+<button onclick="put('tan(')">tan</button>
+<button onclick="put('asin(')">sin⁻¹</button>
+<button onclick="put('acos(')">cos⁻¹</button>
+<button onclick="put('atan(')">tan⁻¹</button>
+<button onclick="put('log(')">log</button>
+<button onclick="put('ln(')">ln</button>
+<button onclick="put('sqrt(')">√</button>
+<button onclick="put('cbrt(')">∛</button>
+<button onclick="put('abs(')">abs</button>
+<button onclick="put('exp(')">exp</button>
+<button onclick="put('pi')">π</button>
+<button onclick="put('e')">e</button>
+<button onclick="put('^')">xʸ</button>
+<button onclick="put('!')">n!</button>
+<button onclick="put('^2')">x²</button>
+<button onclick="put('^3')">x³</button>
+<button onclick="put('(')">(</button>
+<button onclick="put(')')">)</button>
+</div>
+</div>
+
+<div class="keys">
+<button class="danger" onclick="clearAll()">AC</button>
+<button class="danger" onclick="back()">⌫</button>
+<button class="op" onclick="put('%')">%</button>
+<button class="op" onclick="put('/')">÷</button>
+
+<button onclick="put('7')">7</button>
+<button onclick="put('8')">8</button>
+<button onclick="put('9')">9</button>
+<button class="op" onclick="put('*')">×</button>
+
+<button onclick="put('4')">4</button>
+<button onclick="put('5')">5</button>
+<button onclick="put('6')">6</button>
+<button class="op" onclick="put('-')">−</button>
+
+<button onclick="put('1')">1</button>
+<button onclick="put('2')">2</button>
+<button onclick="put('3')">3</button>
+<button class="op" onclick="put('+')">+</button>
+
+<button onclick="put('Ans')">Ans</button>
+<button onclick="put('0')">0</button>
+<button onclick="put('.')">.</button>
+<button class="equal" onclick="calculate()">=</button>
+
+<button onclick="put('(')">(</button>
+<button onclick="put(')')">)</button>
+<button class="wide" onclick="put('^')">Lũy thừa</button>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:18px">
+<strong>Lịch sử tính toán</strong>
+<button onclick="clearHistory()" style="padding:6px 10px;font-size:12px">Xóa</button>
+</div>
+<div id="history"></div>
+</div>
+
+<script src="/js-calculate.js"></script></body>
+</html>

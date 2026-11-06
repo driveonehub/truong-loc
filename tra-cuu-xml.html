@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đọc và Tra cứu nhiều hóa đơn XML</title>
+<link rel="icon" href="vanlang.ico" type="image/x-icon">
+<link rel="stylesheet" href="/css-readxml.css">
+
+</head>
+
+<body>
+    
+<div class="tabs" id="dashboardTabs">
+  <a class="home-link" href="/" title="Trang chủ" aria-label="Trang chủ">
+    <img src="/home.png" width="45" height="32" alt="Home"></a>
+  <a class="tab" data-tab="invoice" href="index.html">Hóa đơn</a>
+  <a class="tab" data-tab="lookup" href="#">Tra cứu XML</a>
+  <a class="tab" data-tab="calculate" href="may-tinh.html">Máy tính</a>
+</div>
+    
+<h3>Tải lên nhiều file XML hóa đơn</h3>
+<input type="file" id="xmlFiles" multiple accept=".xml">
+
+<div id="result"></div>
+
+<script src="vanlang-tengoiy.js"></script>
+<script src="/domainvnpt.js"></script>
+<script src="/invoice-xml.js"></script>
+
+</body>
+</html>
